@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Bewerbung</title>
+  <style>
+    body {
+      background-color: grey;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+    .form-box {
+      background: #f5f5f5;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      width: 350px;
+    }
+    h2 { text-align: center; margin-bottom: 20px; }
+    label { display: block; text-align: left; margin: 10px 0 5px; font-weight: bold; }
+    input, textarea, select {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+    textarea { resize: vertical; min-height: 100px; }
+    button {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      background: #4cafef;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover { background: #2d89ef; }
+  </style>
+</head>
+<body>
+  <div class="form-box">
+    <h2>Bewerbungsformular</h2>
+    <form action="mailto:deine-email@beispiel.de" method="post" enctype="text/plain">
+      <label for="name">Vollständiger Name</label>
+      <input type="text" id="name" name="Name" placeholder="Max Mustermann" required>
+
+      <label for="email">E-Mail-Adresse</label>
+      <input type="email" id="email" name="Email" placeholder="max@beispiel.de" required>
+
+      <label for="phone">Telefonnummer</label>
+      <input type="tel" id="phone" name="Telefon" placeholder="+49 123 456789" required>
+
+      <label for="position">Bewerbung als</label>
+      <select id="position" name="Position" required>
+        <option value="">Bitte auswählen</option>
+        <option value="Objektschutz">Objektschutz</option>
+        <option value="Veranstaltungsschutz">Veranstaltungsschutz</option>
+        <option value="Personenschutz">Personenschutz</option>
+        <option value="Allgemein">Allgemein</option>
+      </select>
+
+      <label for="anschreiben">Anschreiben</label>
+      <textarea id="anschreiben" name="Anschreiben" placeholder="Warum möchten Sie bei uns arbeiten?" required></textarea>
+
+      <button type="submit">Bewerbung absenden</button>
+    </form>
+  </div>
+</body>
+</html>
